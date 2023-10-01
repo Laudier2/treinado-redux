@@ -1,6 +1,13 @@
 import { FaOpencart } from "react-icons/fa";
 
 export default function NavBar() {
+
+    function handlerCart(e) {
+        console.log(e.n)
+    }
+
+    let r = { n: "OI" }
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
@@ -32,7 +39,9 @@ export default function NavBar() {
                             </li>
                         </ul>
                     </div>
-                    <FaOpencart className="h2" />
+                    <button className="btn">
+                        <FaOpencart className="h2" onClick={() => handlerCart(r)} />
+                    </button>
                 </div>
             </nav>
         </div>
